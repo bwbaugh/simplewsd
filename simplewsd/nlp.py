@@ -20,7 +20,7 @@ def no_stopwords(iterable):
 
 
 def no_punct(iterable):
-    """Generator that discards stopwords."""
+    """Generator that discards punctuation-only tokens."""
     for x in iterable:
         if x not in string.punctuation:
             yield x
