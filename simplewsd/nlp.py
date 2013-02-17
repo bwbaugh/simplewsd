@@ -28,7 +28,7 @@ def no_punct(iterable):
 
 def split_on_punct(text):
     """Split on any whitespace or punctuation."""
-    pattern = r'[\s{}]'.format(string.punctuation)
+    pattern = r'[\s{0}]'.format(string.punctuation)
     tokens = list(no_punct(re.split(pattern, text)))
     assert not any(x == '' for x in tokens)
     assert not any(x in string.punctuation for x in itertools.chain(tokens)), tokens
