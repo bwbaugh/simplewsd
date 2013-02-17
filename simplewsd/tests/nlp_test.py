@@ -1,7 +1,7 @@
 # Copyright (C) 2013 Brian Wesley Baugh
 import string
-from nltk.corpus import stopwords
-from simplewsd.nlp import word_tokenize, no_stopwords, no_punct, split_on_punct
+from simplewsd.nlp import (stopwords, word_tokenize, no_stopwords, no_punct,
+    split_on_punct)
 
 
 def test_word_tokenize():
@@ -13,7 +13,7 @@ def test_word_tokenize():
 
 
 def test_no_stopwords():
-    tokens = stopwords.words('english') + ['happy']
+    tokens = stopwords + ['happy']
     tokens = list(no_stopwords(tokens))
     assert tokens == ['happy']
 
