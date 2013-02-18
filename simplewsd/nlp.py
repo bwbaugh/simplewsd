@@ -3,25 +3,13 @@
 import itertools
 import re
 import string
-import nltk
 from nltk.corpus import stopwords as stopword_list
 
 
-try:
-    stopwords = stopword_list.words('english')
-except LookupError:  # pragma: no cover
-    if nltk.download('stopwords'):
-        stopwords = stopword_list.words('english')
-    else:
-        raise
+stopwords = stopword_list.words('english')
 
 
-def word_tokenize(sentence):
-    """Tokenize a single sentence."""
-    return nltk.word_tokenize(sentence)
-
-
-def no_stopwords(iterable):
+def no_stopwords(iterable, language='english'):
     """Generator that discards stopwords."""
     for x in iterable:
         if x not in stopwords:

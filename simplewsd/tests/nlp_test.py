@@ -1,15 +1,6 @@
 # Copyright (C) 2013 Brian Wesley Baugh
 import string
-from simplewsd.nlp import (stopwords, word_tokenize, no_stopwords, no_punct,
-    split_on_punct)
-
-
-def test_word_tokenize():
-    # Text example from: http://nltk.org/api/nltk.tokenize.html
-    sentence = 'Good muffins cost $3.88\nin New York.'
-    tokens = ['Good', 'muffins', 'cost', '$', '3.88', 'in', 'New', 'York', '.']
-    result = word_tokenize(sentence)
-    assert result == tokens
+from simplewsd.nlp import stopwords, no_stopwords, no_punct, split_on_punct
 
 
 def test_no_stopwords():

@@ -1,5 +1,7 @@
 *.pyc
 *.pyo
 .coverage
+*.egg-info/
+build/
 cover/
 dist/
